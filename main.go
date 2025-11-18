@@ -17,13 +17,13 @@ func main() {
 	// 配置参数
 	blockchainRPC := "https://evmrpc-testnet.0g.ai/"
 	indexerURL := "https://indexer-storage-testnet-turbo.0g.ai"
-	filePath := "DISC-Law-SFT-Pair-QA-released.jsonl"
+	filePath := "full.jsonl"
 
 	privateKey := os.Getenv("PRIVATE_KEY")
 
-	fragmentSize := int64(20 * 1024 * 1024)
+	fragmentSize := int64(400 * 1024 * 1024)
 
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Minute)
+	ctx, cancel := context.WithTimeout(context.Background(), 1000*time.Minute)
 	defer cancel()
 
 	// 初始化 Web3 客户端
@@ -86,7 +86,7 @@ func main() {
 	time.Sleep(5 * time.Second)
 
 	// 下载文件
-	outputPath := "downloaded_file.bin"
+	outputPath := "dataset.jsonl"
 	logrus.Info("开始下载文件...")
 
 	// 将所有 root hash 转换为字符串数组
