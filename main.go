@@ -17,11 +17,11 @@ func main() {
 	// 配置参数
 	blockchainRPC := "https://evmrpc-testnet.0g.ai/"
 	indexerURL := "https://indexer-storage-testnet-turbo.0g.ai"
-	filePath := "full.jsonl"
+	filePath := "DISC-Law-SFT-Pair-QA-released.jsonll"
 
 	privateKey := os.Getenv("PRIVATE_KEY")
 
-	fragmentSize := int64(400 * 1024 * 1024)
+	fragmentSize := int64(20 * 1024 * 1024)
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Minute)
 	defer cancel()
