@@ -17,7 +17,7 @@ func main() {
 	// 配置参数
 	blockchainRPC := "https://evmrpc-testnet.0g.ai/"
 	indexerURL := "https://indexer-storage-testnet-turbo.0g.ai"
-	filePath := "DISC-Law-SFT-Pair-QA-released.jsonll"
+	filePath := "DISC-Law-SFT-Pair-QA-released.jsonl"
 
 	privateKey := os.Getenv("PRIVATE_KEY")
 
